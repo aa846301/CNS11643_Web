@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}My Site{% endblock %}</title>
-    {% block css %}
-        <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    {% endblock %}
+    {# {% block css %} #}
+        {#<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">#}
+    {# {% endblock %} #}
 </head>
 <body>
     {% block content %}{% endblock %}
-    {% block js %}
-        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-        <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-    {% endblock %}
+    {% comment %} {% block js %} {% endcomment %}
+        {% comment %} <script src="{% static 'js/bootstrap.min.js' %}"></script> {% endcomment %}
+    {% comment %} {% endblock %} {% endcomment %}
 </body>
 </html>
