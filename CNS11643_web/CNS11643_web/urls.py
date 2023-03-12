@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from word_crud.views import word_test,word_search
+from word_crud.views import word_view,index_view,sreach_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cns/', word_test),
-    path('', word_search),
+    path('cns/', word_view),
+    path('', index_view,name='index'),
+    path('sreach/',sreach_view,name='search_url'),
 ]
