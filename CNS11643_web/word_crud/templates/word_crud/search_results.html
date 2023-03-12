@@ -13,14 +13,14 @@
   </head>
   <body>
   <nav class="navbar navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand">CNS11643 中文標準交換碼</a>
-    <form method="GET" class="d-flex" action="{% url 'search_url' %}">
-      {% csrf_token %}
-      <input name="search_field" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">快速搜索</button>
-    </form>
-  </div>
+    <div class="container">
+      <a class="navbar-brand">CNS11643 中文標準交換碼</a>
+      <form method="GET" class="d-flex" action="{% url 'search_url' %}">
+        {% csrf_token %}
+        <input name="search_field" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">快速搜索</button>
+      </form>
+    </div>
   </nav>
   <div class="container">
     <div class="row">
@@ -28,7 +28,7 @@
         <div class="card" style="width: 18rem; margin-top: 15px">
           <div class="card-header">CNS</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{search_query}}</li>
+            <li class="list-group-item">{{CharMaps.0.cns_code}}</li>
           </ul>
         </div>
       </div>
@@ -36,7 +36,7 @@
         <div class="card" style="width: 18rem; margin-top: 15px">
           <div class="card-header">Unicode</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
+            <li class="list-group-item">{{CharMaps.0.unicode_code}}</li>
 
           </ul>
         </div>
@@ -45,17 +45,7 @@
         <div class="card" style="width: 18rem; margin-top: 15px">
           <div class="card-header">BIG-5</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-
-          </ul>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 18rem; margin-top: 15px"> 
-          <div class="card-header">EUC</div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-
+            <li class="list-group-item">{{CharMaps.0.big5_code}}</li>
           </ul>
         </div>
       </div>
