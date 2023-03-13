@@ -23,26 +23,42 @@
     </div>
   </nav>
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="card" style="width: 18rem; margin-top: 15px">
-          <div class="card-header">CNS</div>
+  <div class="row gx-5">
+    <div class="col"></div>
+    <div class="col">
+      <div class="card text-center" style="width: 18rem; margin-top: 15px">
+        <div class="card-header">查詢結果</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{CharMaps.0.cns_code}}</li>
+            <li class="list-group-item" style="margin-top: 15px">
+              <p class="fs-2">{{search_query}}</p>
+            </li>
           </ul>
         </div>
       </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</div>
+  <div class="container">
+    <div class="row gx-5">
       <div class="col">
-        <div class="card" style="width: 18rem; margin-top: 15px">
+        <div class="card text-center" style="width: 18rem; margin-top: 15px">
+          <div class="card-header">CNS</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{CharMaps.0.cns_code}}</li>
+            </ul>
+          </div>
+        </div>
+      <div class="col">
+        <div class="card text-center" style="width: 18rem; margin-top: 15px">
           <div class="card-header">Unicode</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">{{CharMaps.0.unicode_code}}</li>
-
           </ul>
         </div>
       </div>
       <div class="col">
-        <div class="card" style="width: 18rem; margin-top: 15px">
+        <div class="card text-center" style="width: 18rem; margin-top: 15px">
           <div class="card-header">BIG-5</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">{{CharMaps.0.big5_code}}</li>

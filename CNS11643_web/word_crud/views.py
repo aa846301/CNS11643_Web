@@ -23,7 +23,7 @@ def sreach_view(request):
         CharMaps = WordModels.objects.filter(unicode_code=word_uni)
         if CharMaps.count()>0:
             #有對應資料
-            return render(request,'word_crud/search_results.html',{'CharMaps': CharMaps})
+            return render(request,'word_crud/search_results.html',{'CharMaps': CharMaps,'search_query':search_query})
         else:
             #無對應資料
             return render(request,'word_crud/search.html',{'search_query': search_query})
